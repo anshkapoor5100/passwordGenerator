@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="content">
+            <div class="header">
+                PASSWORD GENERATOR
+            </div>
+            <div class="pass-container">
+                <input readonly type="text" class="password" placeholder="PASSWORD"></input>
+                <i class="fa fa-copy"></i>
+                
+            </div>
+            <div class="body">
+                <div class="length">
+                    <div>Password Length</div>
+                    <div class="length-num">10</div>
+                </div>
+                <input type="range" class="slider" min="0" max="20" step="1">
+
+                <div class="list">
+                    <div class="list-item">
+                        <input type="checkbox" class="i-am" checked="true" name="checkbox1" id="checkbox1"><label for="checkbox1">Include Uppercase Letters</label> 
+                    </div>
+                    <div class="list-item">
+                        <input type="checkbox" class="i-am" name="checkbox2" id="checkbox2"><label for="checkbox2">Include Lowercase Letters</label> 
+                    </div>
+                    <div class="list-item">
+                        <input type="checkbox" class="i-am" name="checkbox3" id="checkbox3"><label for="checkbox3">Include Numbers</label> 
+                    </div>
+                    <div class="list-item">
+                        <input type="checkbox" class="i-am" name="checkbox4" id="checkbox4"><label for="checkbox4">Include Symbols</label> 
+                    </div>
+                </div>
+
+                <div class="strength">
+                    Strength
+                    <div class="circle"></div>
+                </div>
+                <div class="generate">
+                    GENERATE PASSWORD
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

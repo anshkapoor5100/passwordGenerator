@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+:root{
+    overflow: hidden;
+}
+#wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(231deg, rgba(22, 6, 40, 1) 0%, rgba(52, 28, 79, 1) 50%, rgba(88, 7, 125, 1) 100%);
+    overflow-y: auto;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 420px;
+    margin: 50px 5px;
+    margin-top: 100px;
+
+}
+
+.header{
+    color: hsl(0, 0%, 100%);
+    font-size: 2em;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.password{
+    appearance: none;
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    color: hsl(52, 100%, 62%);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    user-select: none;
+}
+
+.pass-container{
+    outline: none;
+    border: none;
+    color: hsl(52, 100%, 62%);;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(268, 75%, 9%);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    border-bottom: 0.35rem solid hsl(281, 89%, 26%);
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: hsl(268, 75%, 9%);
+    border-radius: 1rem;
+    color: white;
+    padding: 1.75rem 1.75rem;
+}
+
+.length{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.length-num{
+    color: hsl(52, 100%, 62%);
+    font-weight: 700;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.strength{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+.circle{
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: rgb(204, 204, 204);
+    box-shadow: var(--color) 0px 0px 12px 1px;
+
+}
+.list input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(176, 100%, 44%);
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+    overflow: hidden;
+}
+
+
+.list input:checked{
+    background-color:hsl(176, 100%, 44%) ;
+}
+
+.list input:checked::before {
+    position: absolute;
+    content: '✔';
+    color:hsl(198, 20%, 13%);
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 10%;
+    right: 0;
+    top: -10%;
+    bottom: 0;
+    /* background-color:hsl(176, 100%, 44%) ; */
+    /* border-radius: 0.1rem; */
+}
+.generate{
+    text-align: center;
+    background-color: hsl(285, 91%, 52%);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 0.35rem solid hsl(52, 100%, 62%);
+    color: hsl(52, 100%, 62%);
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.fa{
+    color: hsl(176, 100%, 44%);
+    cursor: pointer;
+}
+
+.list-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+}
+
+.slider{
+    appearance: none;
+    background: hsl(268, 47%, 21%);
+    border-radius: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    height: 15px;
+    position: relative;
+    z-index: 0;
+
+}
+.slider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: var(--slider-bg-width); /* Use custom property */
+    top: 0;
+    bottom: 0;
+    background-color: hsl(285, 91%, 52%);
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    z-index: -1;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    background: hsl(52, 100%, 62%); 
+    border: 2px solid hsl(52, 100%, 62%);
+    border-radius: 100%;
+    box-shadow: hsl(52, 100%, 62%) 0px 0px 5px 0px;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    background: hsl(268, 75%, 9%); 
+    box-shadow: hsl(52, 100%, 62%) 0px 0px 30px 5px;
+
+  }
